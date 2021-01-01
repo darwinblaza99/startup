@@ -15,8 +15,10 @@ class User extends Authenticatable
 
     public function positions()
     {
-        return $this->hasMany(Position::class);
+       
+        return $this->belongsTo(Position::class);
     }
+
 
     /**
      * The attributes that are mass assignable.
